@@ -1,0 +1,166 @@
+[
+  {
+    "id": "app001",
+    "name": "Duolingo",
+    "developer": "Duolingo, Inc.",
+    "thumbnail": "https://i.ibb.co/1GMnXsk/duolingo.png",
+    "banner": "https://i.ibb.co/6bZKkLv/duolingo-banner.jpg",
+    "downloads": 100000000,
+    "category": "Education",
+    "rating": 4.7,
+    "description": "Learn over 30 languages with fun, bite-sized lessons. Duolingo is the world's most popular language learning app.",
+    "features": [
+      "Daily language lessons",
+      "Gamified practice",
+      "Progress tracking"
+    ],
+    "reviews": [
+      {
+        "user": "lingo_lover",
+        "rating": 5,
+        "comment": "Fun and effective! I’m learning French every day."
+      }
+    ]
+  },
+  {
+    "id": "app002",
+    "name": "Headspace",
+    "developer": "Headspace Inc.",
+    "thumbnail": "https://i.ibb.co/B2CjhYV/headspace.jpg",
+    "banner": "https://i.ibb.co/ZhdgMCV/headspace-banner.jpg",
+    "downloads": 10000000,
+    "category": "Health & Fitness",
+    "rating": 4.6,
+    "description": "Meditation and mindfulness made simple. Reduce stress and sleep better with guided sessions.",
+    "features": ["Guided meditation", "Sleep sounds", "Mindfulness reminders"],
+    "reviews": [
+      {
+        "user": "zen_bro",
+        "rating": 4.5,
+        "comment": "Great for managing anxiety and sleep!"
+      }
+    ]
+  },
+  {
+    "id": "app003",
+    "name": "Notion",
+    "developer": "Notion Labs, Inc.",
+    "thumbnail": "https://i.ibb.co/ZzRgtkSp/notion.png",
+    "banner": "https://i.ibb.co/hW91zhJ/notion-banner.jpg",
+    "downloads": 10000000,
+    "category": "Productivity",
+    "rating": 4.5,
+    "description": "All-in-one workspace for notes, tasks, databases, and calendars. Ideal for students, teams, and creatives.",
+    "features": [
+      "Customizable pages",
+      "Task management",
+      "Collaboration tools"
+    ],
+    "reviews": [
+      {
+        "user": "organized_amy",
+        "rating": 5,
+        "comment": "I run my whole life in Notion. Super versatile."
+      }
+    ]
+  },
+  {
+    "id": "app004",
+    "name": "Forest",
+    "developer": "Seekrtech",
+    "thumbnail": "https://i.ibb.co/gb3npFQ/forest.jpg",
+    "banner": "https://i.ibb.co/p1HYPzM/forest-banner.jpg",
+    "downloads": 5000000,
+    "category": "Productivity",
+    "rating": 4.8,
+    "description": "Stay focused by planting virtual trees. If you stay off your phone, the tree grows!",
+    "features": ["Pomodoro timer", "Tree planting motivation", "Focus stats"],
+    "reviews": [
+      {
+        "user": "focus_mode_on",
+        "rating": 5,
+        "comment": "A creative way to avoid distractions and get things done."
+      }
+    ]
+  },
+  {
+    "id": "app005",
+    "name": "Khan Academy",
+    "developer": "Khan Academy",
+    "thumbnail": "https://i.ibb.co/TMQLGXj/khan-Academy.png",
+    "banner": "https://i.ibb.co/XVwSTWh/khanacademy-banner.jpg",
+    "downloads": 10000000,
+    "category": "Education",
+    "rating": 4.7,
+    "description": "Free world-class education for anyone, anywhere. Includes math, science, economics, and more.",
+    "features": ["Video lessons", "Practice exercises", "Progress tracking"],
+    "reviews": [
+      {
+        "user": "math_genius",
+        "rating": 5,
+        "comment": "Helped me ace my SATs. Thank you Khan Academy!"
+      }
+    ]
+  },
+  {
+    "id": "app006",
+    "name": "Todoist",
+    "developer": "Doist",
+    "thumbnail": "https://i.ibb.co/4RCmDbr/todolist.png",
+    "banner": "https://i.ibb.co/MpNHYr6/todoist-banner.jpg",
+    "downloads": 10000000,
+    "category": "Productivity",
+    "rating": 4.5,
+    "description": "The best to-do list app for task management and daily planning. Simple and powerful.",
+    "features": [
+      "Task scheduling",
+      "Labels and filters",
+      "Collaboration support"
+    ],
+    "reviews": [
+      {
+        "user": "taskmaster_jay",
+        "rating": 4.5,
+        "comment": "Keeps my day organized. Love the simplicity."
+      }
+    ]
+  },
+  {
+    "id": "app007",
+    "name": "Google Fit",
+    "developer": "Google LLC",
+    "thumbnail": "https://i.ibb.co/ZzWPVDX/googlefit.png",
+    "banner": "https://i.ibb.co/wSKtKT8/googlefit-banner.jpg",
+    "downloads": 50000000,
+    "category": "Health & Fitness",
+    "rating": 4.0,
+    "description": "Track your activity, heart rate, and goals with Google Fit. A complete fitness companion.",
+    "features": ["Activity tracking", "Heart rate monitor", "Step counter"],
+    "reviews": [
+      {
+        "user": "stepking",
+        "rating": 4,
+        "comment": "Simple and integrates well with wearables."
+      }
+    ]
+  },
+  {
+    "id": "app008",
+    "name": "Coursera",
+    "developer": "Coursera, Inc.",
+    "thumbnail": "https://i.ibb.co/BKgzTBj/coursera.png",
+    "banner": "https://i.ibb.co/ykCgDXD/coursera-banner.jpg",
+    "downloads": 10000000,
+    "category": "Education",
+    "rating": 4.6,
+    "description": "Access top university courses and certifications anytime, anywhere. Learn business, tech, and more.",
+    "features": ["Video lectures", "Certificates", "Offline access"],
+    "reviews": [
+      {
+        "user": "learn_more",
+        "rating": 5,
+        "comment": "Loved the quality of courses. Super helpful for my career."
+      }
+    ]
+  }
+]
