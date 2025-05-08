@@ -1,9 +1,9 @@
 [
   {
-    "id": "app001",
+    "id": "1",
     "name": "Duolingo",
     "developer": "Duolingo, Inc.",
-    "thumbnail": "https://i.ibb.co/1GMnXsk/duolingo.png",
+    "thumbnail": "https://i.ibb.co.com/1GMnXskC/duolingo.png",
     "banner": "https://i.ibb.co/6bZKkLv/duolingo-banner.jpg",
     "downloads": 100000000,
     "category": "Education",
@@ -23,10 +23,10 @@
     ]
   },
   {
-    "id": "app002",
+    "id": "2",
     "name": "Headspace",
     "developer": "Headspace Inc.",
-    "thumbnail": "https://i.ibb.co/B2CjhYV/headspace.jpg",
+    "thumbnail": "https://i.ibb.co.com/B2CjhYVZ/headspace.jpg",
     "banner": "https://i.ibb.co/ZhdgMCV/headspace-banner.jpg",
     "downloads": 10000000,
     "category": "Health & Fitness",
@@ -42,10 +42,10 @@
     ]
   },
   {
-    "id": "app003",
+    "id": "3",
     "name": "Notion",
     "developer": "Notion Labs, Inc.",
-    "thumbnail": "https://i.ibb.co/ZzRgtkSp/notion.png",
+    "thumbnail": "https://i.ibb.co.com/ZzRgtkSp/notion.png",
     "banner": "https://i.ibb.co/hW91zhJ/notion-banner.jpg",
     "downloads": 10000000,
     "category": "Productivity",
@@ -65,10 +65,10 @@
     ]
   },
   {
-    "id": "app004",
+    "id": "4",
     "name": "Forest",
     "developer": "Seekrtech",
-    "thumbnail": "https://i.ibb.co/gb3npFQ/forest.jpg",
+    "thumbnail": "https://i.ibb.co.com/gb3npFQf/forest.jpg",
     "banner": "https://i.ibb.co/p1HYPzM/forest-banner.jpg",
     "downloads": 5000000,
     "category": "Productivity",
@@ -84,10 +84,10 @@
     ]
   },
   {
-    "id": "app005",
+    "id": "5",
     "name": "Khan Academy",
     "developer": "Khan Academy",
-    "thumbnail": "https://i.ibb.co/TMQLGXj/khan-Academy.png",
+    "thumbnail": "https://i.ibb.co.com/TMQLGXjG/khan-Academy.png",
     "banner": "https://i.ibb.co/XVwSTWh/khanacademy-banner.jpg",
     "downloads": 10000000,
     "category": "Education",
@@ -103,10 +103,10 @@
     ]
   },
   {
-    "id": "app006",
+    "id": "6",
     "name": "Todoist",
     "developer": "Doist",
-    "thumbnail": "https://i.ibb.co/4RCmDbr/todolist.png",
+    "thumbnail": "https://i.ibb.co.com/4RCmDbrN/todolist.png",
     "banner": "https://i.ibb.co/MpNHYr6/todoist-banner.jpg",
     "downloads": 10000000,
     "category": "Productivity",
@@ -126,10 +126,10 @@
     ]
   },
   {
-    "id": "app007",
+    "id": "7",
     "name": "Google Fit",
     "developer": "Google LLC",
-    "thumbnail": "https://i.ibb.co/ZzWPVDX/googlefit.png",
+    "thumbnail": "https://i.ibb.co.com/ZzWPVDXs/googlefit.png",
     "banner": "https://i.ibb.co/wSKtKT8/googlefit-banner.jpg",
     "downloads": 50000000,
     "category": "Health & Fitness",
@@ -145,10 +145,10 @@
     ]
   },
   {
-    "id": "app008",
+    "id": "8",
     "name": "Coursera",
     "developer": "Coursera, Inc.",
-    "thumbnail": "https://i.ibb.co/BKgzTBj/coursera.png",
+    "thumbnail": "https://i.ibb.co.com/BKgzTBj0/coursera.png",
     "banner": "https://i.ibb.co/ykCgDXD/coursera-banner.jpg",
     "downloads": 10000000,
     "category": "Education",
