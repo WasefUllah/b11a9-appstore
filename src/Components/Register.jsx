@@ -5,8 +5,20 @@ import { AuthContext } from "../Provider/AuthProvider";
 // import { onAuthStateChanged } from "firebase/auth";
 
 const Register = () => {
-  const { createUser, updateUser, setUserInfo } = use(AuthContext);
+  const { createUser, updateUser, setUserInfo, createUserWithGoogle } =
+    use(AuthContext);
   const navigate = useNavigate();
+  const handleCreateUserWithGoogle = () => {
+    createUserWithGoogle()
+      .then((result) => {
+        const user = result.user;
+        setUserInfo(user);
+        navigate(`${location.state ? location.state : "/"}`);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   const handleRegisterBtn = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -94,7 +106,10 @@ const Register = () => {
                 Register
               </button>
             </form>
-            <button className="btn bg-white text-black border-[#e5e5e5] hover:bg-base-200">
+            <button
+              onClick={handleCreateUserWithGoogle}
+              className="btn bg-white text-black border-[#e5e5e5] hover:bg-base-200"
+            >
               <svg
                 aria-label="Google logo"
                 width="16"

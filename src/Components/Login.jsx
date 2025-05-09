@@ -5,10 +5,21 @@ import { Navigate } from "react-router";
 
 const Login = () => {
   const [error, setError] = useState("");
-  const { signIn } = use(AuthContext);
+  const { signIn, createUserWithGoogle, setUserInfo } = use(AuthContext);
   const location = useLocation();
   // console.log(location);
   const navigate = useNavigate();
+  const handleCreateUserWithGoogle = () => {
+    createUserWithGoogle()
+      .then((result) => {
+        const user = result.user;
+        setUserInfo(user);
+        navigate(`${location.state ? location.state : "/"}`);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   const handleLoginBtn = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -59,7 +70,10 @@ const Login = () => {
                 Login
               </button>
             </form>
-            <button className="btn bg-white text-black border-[#e5e5e5] hover:bg-base-200">
+            <button
+              onClick={handleCreateUserWithGoogle}
+              className="btn bg-white text-black border-[#e5e5e5] hover:bg-base-200"
+            >
               <svg
                 aria-label="Google logo"
                 width="16"

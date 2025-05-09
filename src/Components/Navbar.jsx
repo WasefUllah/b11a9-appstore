@@ -2,12 +2,16 @@ import React, { use } from "react";
 import logo from "../assets/logo.png";
 import { Link, NavLink } from "react-router";
 import { AuthContext } from "../Provider/AuthProvider";
+import Loading from "./Loading";
 const Navbar = () => {
-  const { userInfo, logOut } = use(AuthContext);
+  const { userInfo, logOut, loading } = use(AuthContext);
   const handleLogoutBtn = () => {
     logOut();
   };
   console.log(userInfo);
+  if(loading){
+    return <Loading></Loading>
+  }
   return (
     <div className="w-11/12 mx-auto flex justify-between items-center py-3">
       <div>
