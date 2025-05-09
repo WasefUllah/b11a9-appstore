@@ -1,7 +1,7 @@
 import React from "react";
 
 const Slider = ({ app }) => {
-  console.log(app);
+
 
   return (
     <div className="carousel   carousel-center bg-neutral rounded-box space-x-4 p-4">

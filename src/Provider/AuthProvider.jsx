@@ -50,13 +50,15 @@ const AuthProvider = ({ children }) => {
         alert(errorCode, " ", errorMessage);
       });
   };
-
   const updateUser = (updatedUser) => {
     return updateProfile(auth.currentUser, updatedUser);
   };
-
+  
+  // console.log(userInfo);
   const [userInfo, setUserInfo] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [displayName, setDisplayName] = useState(userInfo?.displayName || '');
+  const [photoURL, setPhotoURL] = useState(userInfo?.photoURL || '');
   const AuthData = {
     userInfo,
     setUserInfo,
@@ -67,6 +69,8 @@ const AuthProvider = ({ children }) => {
     setLoading,
     updateUser,
     createUserWithGoogle,
+    photoURL, setPhotoURL,
+    displayName, setDisplayName
   };
   return <AuthContext value={AuthData}>{children}</AuthContext>;
 };

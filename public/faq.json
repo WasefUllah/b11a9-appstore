@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "question": "How can I install an app from this App Store?",
+    "answer": "To install an app, go to the app's detail page and click on the 'Install' button. If you're on mobile, it will redirect you to the respective app store (Google Play or App Store)."
+  },
+  {
+    "id": 2,
+    "question": "Is it safe to download apps from this site?",
+    "answer": "Yes, all apps listed here are verified and sourced from official developers. We ensure the apps meet safety and privacy standards."
+  },
+  {
+    "id": 3,
+    "question": "Can I leave a review for an app?",
+    "answer": "Absolutely! Navigate to the app's page and scroll to the review section. You must be logged in to submit a review."
+  },
+  {
+    "id": 4,
+    "question": "What categories of apps are available?",
+    "answer": "We offer a wide range of categories including Productivity, Education, Health & Fitness, Entertainment, and more."
+  },
+  {
+    "id": 5,
+    "question": "How do I contact support?",
+    "answer": "You can reach our support team by clicking on the 'Contact Us' link at the bottom of the page or sending an email to support@appstore.com."
+  },
+  {
+    "id": 6,
+    "question": "Can I submit my own app to be featured?",
+    "answer": "Yes, developers can submit their apps for review. Go to the Developer Portal and follow the submission guidelines."
+  },
+  {
+    "id": 7,
+    "question": "Do I need an account to use the App Store?",
+    "answer": "You can browse apps without an account, but to leave reviews or install apps, you need to sign up or log in."
+  },
+  {
+    "id": 8,
+    "question": "Are all apps free?",
+    "answer": "While many apps are free to use, some may offer premium versions or in-app purchases."
+  }
+]

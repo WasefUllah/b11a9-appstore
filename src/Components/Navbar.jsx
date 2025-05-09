@@ -8,7 +8,7 @@ const Navbar = () => {
   const handleLogoutBtn = () => {
     logOut();
   };
-  console.log(userInfo);
+  console.log("navbar", userInfo);
   if(loading){
     return <Loading></Loading>
   }
@@ -19,9 +19,12 @@ const Navbar = () => {
       </div>
       <div className="flex justify-center items-center gap-5">
         <NavLink to="/">App</NavLink>
+        <NavLink to="/blogs">BLogs</NavLink>
         {userInfo && <NavLink to="/myProfile">My profile</NavLink>}
       </div>
-      <div>
+      <div className="flex justify-center items-center gap-3">
+        <img className="w-12 rounded-full " src={userInfo?.photoURL} alt="" />
+
         {userInfo ? (
           
           <button className="btn btn-primary" onClick={handleLogoutBtn}>
