@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "../assets/logo.png";
-import { NavLink } from "react-router";
+import { Link, NavLink } from "react-router";
 const Navbar = () => {
   return (
     <div className="w-11/12 mx-auto flex justify-between items-center py-3">
@@ -12,7 +12,7 @@ const Navbar = () => {
         <NavLink to="/myProfile">My profile</NavLink>
       </div>
       <div>
-        <button className="btn btn-primary">Login</button>
+        <Link to={"/auth/login"} className="btn btn-primary">Login</Link>
       </div>
     </div>
   );

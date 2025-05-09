@@ -5,6 +5,8 @@ import AuthLayout from "../Layouts/AuthLayout";
 import MyProfile from "../Components/MyProfile";
 import ErrorComponent from "../Components/ErrorComponent";
 import Loading from "../Components/Loading";
+import Login from "../Components/Login";
+import Register from "../Components/Register";
 
 const route = createBrowserRouter([
   {
@@ -23,6 +25,16 @@ const route = createBrowserRouter([
   {
     path: "/auth",
     Component: AuthLayout,
+    children:[
+      {
+        path: "/auth/login",
+        Component: Login
+      },
+      {
+        path: "/auth/register",
+        Component: Register
+      }
+    ]
   },
   {
     path: "/*",
