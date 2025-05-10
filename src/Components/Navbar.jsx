@@ -9,8 +9,8 @@ const Navbar = () => {
     logOut();
   };
   console.log("navbar", userInfo);
-  if(loading){
-    return <Loading></Loading>
+  if (loading) {
+    return <Loading></Loading>;
   }
   return (
     <div className="w-11/12 mx-auto flex justify-between items-center py-3">
@@ -23,20 +23,22 @@ const Navbar = () => {
         {userInfo && <NavLink to="/myProfile">My profile</NavLink>}
       </div>
       <div className="flex justify-center items-center gap-3">
-        <img className="w-12 rounded-full " src={userInfo?.photoURL} alt="" />
+        <img
+          className="w-12 h-12 rounded-full object-cover"
+          src={userInfo?.photoURL}
+          alt=""
+        />
 
         {userInfo ? (
-          
           <button className="btn btn-primary" onClick={handleLogoutBtn}>
-          Logout
-        </button>
+            Logout
+          </button>
         ) : (
           <Link to={"/auth/login"} className="btn btn-primary">
             Login
           </Link>
         )}
       </div>
-      
     </div>
   );
 };
