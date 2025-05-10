@@ -26,7 +26,10 @@ const Navbar = () => {
       </div>
       <div className="flex justify-center items-center gap-3">
         {userInfo && (
-          <div className="tooltip tooltip-bottom" data-tip={`${userInfo?.displayName}`}>
+          <div
+            className="tooltip tooltip-bottom"
+            data-tip={`${userInfo?.displayName}`}
+          >
             <img
               className="w-12 h-12 rounded-full object-cover "
               src={userInfo?.photoURL}
