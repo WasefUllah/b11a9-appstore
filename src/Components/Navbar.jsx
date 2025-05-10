@@ -23,11 +23,13 @@ const Navbar = () => {
         {userInfo && <NavLink to="/myProfile">My profile</NavLink>}
       </div>
       <div className="flex justify-center items-center gap-3">
-        <img
-          className="w-12 h-12 rounded-full object-cover"
-          src={userInfo?.photoURL}
-          alt=""
-        />
+        {userInfo && (
+          <img
+            className="w-12 h-12 rounded-full object-cover"
+            src={userInfo?.photoURL}
+            alt=""
+          />
+        )}
 
         {userInfo ? (
           <button className="btn btn-primary" onClick={handleLogoutBtn}>

@@ -10,6 +10,7 @@ import {
   updateProfile,
 } from "firebase/auth";
 import app from "../Firebase/firebase.config";
+import { toast } from "react-toastify";
 
 export const AuthContext = createContext();
 
@@ -42,12 +43,12 @@ const AuthProvider = ({ children }) => {
   const logOut = () => {
     return signOut(auth)
       .then(() => {
-        alert("logged out");
+        toast("logged out");
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        alert(errorCode, " ", errorMessage);
+        toast(errorCode, " ", errorMessage);
       });
   };
   const updateUser = (updatedUser) => {

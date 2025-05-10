@@ -5,6 +5,7 @@ import { useParams } from "react-router";
 
 import { AuthContext } from "../Provider/AuthProvider";
 import Review from "./Review";
+import { toast } from "react-toastify";
 
 const AppDetails = () => {
   // const {  setAllow } = use(AuthContext);
@@ -26,7 +27,7 @@ const AppDetails = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!allow) {
-      alert("You have to install it first");
+      toast("You have to install it first");
       return;
     }
 

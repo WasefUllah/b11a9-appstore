@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
+import { toast } from "react-toastify";
 
 const MyProfile = () => {
   const { userInfo, updateUser } = useContext(AuthContext);
@@ -24,11 +25,11 @@ console.log("after", userInfo);
     // setUserInfo({ ...userInfo, displayName: displayName, photoURL: photoURL });
     updateUser({ displayName, photoURL })
       .then(() => {
-        alert("Profile updated successfully!");
+        toast("Profile updated successfully!");
       })
       .catch((err) => {
         console.error(err);
-        alert("Failed to update profile");
+        toast("Failed to update profile");
       });
   };
 
