@@ -30,8 +30,12 @@ const Register = () => {
     // console.log(name, email, photo, password);
     const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
     if (!passwordRegex.test(password)) {
-      toast(
-        "Password must be at least 6 characters long, contain at least one lowercase and one uppercase letter."
+      toast.error(
+        "Password must be at least 6 characters long, contain at least one lowercase and one uppercase letter.",
+        {
+          position: "top-center",
+          autoClose: 800,
+        }
       );
       return;
     }
@@ -51,12 +55,17 @@ const Register = () => {
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        toast(errorCode, " ", errorMessage);
+        toast.error(errorCode, " ", errorMessage, {
+          position: "top-center",
+          autoClose: 1000,
+        });
       });
   };
 
   return (
     <div className="mt-10 w-3/5 mx-auto">
+      <title>AppStore | Register</title>
+
       <div className="hero-content flex-col lg:flex-row-reverse">
         <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
           <div className="card-body">

@@ -13,28 +13,33 @@ const MyProfile = () => {
     setDisplayName(userInfo?.displayName || "");
     setPhotoURL(userInfo?.photoURL || "");
   }, [userInfo]);
-console.log("before", userInfo);
+  console.log("before", userInfo);
   const handleUpdate = (e) => {
-    // e.preventDefault();
     const displayName = e.target.name.value;
     const photoURL = e.target.photo.value;
-console.log("after", userInfo);
-    // console.log(displayName, photoURL);
+    console.log("after", userInfo);
     setDisplayName(displayName);
     setPhotoURL(photoURL);
-    // setUserInfo({ ...userInfo, displayName: displayName, photoURL: photoURL });
     updateUser({ displayName, photoURL })
       .then(() => {
-        toast("Profile updated successfully!");
+        toast("Profile updated successfully!", {
+          position: "top-center",
+          autoClose: 800,
+        });
       })
       .catch((err) => {
         console.error(err);
-        toast("Failed to update profile");
+        toast("Failed to update profile", {
+          position: "top-center",
+          autoClose: 800,
+        });
       });
   };
 
   return (
     <div className="max-w-md mx-auto mt-10 bg-base-100 p-6 rounded shadow">
+      <title>AppStore | My-profile</title>
+
       <h2 className="text-xl font-bold mb-4">My Profile</h2>
 
       <div className="flex flex-col items-center mb-4">
@@ -47,7 +52,7 @@ console.log("after", userInfo);
         <p className="text-sm text-gray-500">{userInfo?.email}</p>
       </div>
 
-        <h1 className="text-2xl font-bold pb-3">Update your profile:</h1>
+      <h1 className="text-2xl font-bold pb-3">Update your profile:</h1>
       <form onSubmit={handleUpdate} className="space-y-4">
         <div>
           <label className="label">Display Name</label>

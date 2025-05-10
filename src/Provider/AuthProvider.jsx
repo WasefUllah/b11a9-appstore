@@ -43,12 +43,18 @@ const AuthProvider = ({ children }) => {
   const logOut = () => {
     return signOut(auth)
       .then(() => {
-        toast("logged out");
+        toast.warning("logged out", {
+          position: "top-center",
+          autoClose: 800,
+        });
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        toast(errorCode, " ", errorMessage);
+        toast.error(errorCode, " ", errorMessage, {
+          position: "top-center",
+          autoClose: 1000,
+        });
       });
   };
   const updateUser = (updatedUser) => {
@@ -58,9 +64,7 @@ const AuthProvider = ({ children }) => {
   // console.log(userInfo);
   const [userInfo, setUserInfo] = useState(null);
   const [loading, setLoading] = useState(true);
-  
-  
- 
+
   const [displayName, setDisplayName] = useState(userInfo?.displayName || "");
   const [photoURL, setPhotoURL] = useState(userInfo?.photoURL || "");
   const AuthData = {
@@ -77,9 +81,6 @@ const AuthProvider = ({ children }) => {
     setPhotoURL,
     displayName,
     setDisplayName,
-
-    
-   
   };
   return <AuthContext value={AuthData}>{children}</AuthContext>;
 };

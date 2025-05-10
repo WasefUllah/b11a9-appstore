@@ -20,24 +20,25 @@ const AppDetails = () => {
 
   const handleInstallBtn = () => {
     setAllow(true);
-
     setInstall(!install);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!allow) {
-      toast("You have to install it first");
+      toast("You have to install it first", {
+        position: "top-center",
+        autoClose: 800
+      });
       return;
     }
-
     setComment(e.target.review.value);
-    console.log(e.target.review.value);
-    <Review comment={comment} rating={rating}></Review>;
   };
 
   return (
     <div className="max-w-5xl mx-auto mt-4 bg-base-100 p-6 rounded-xl shadow-md mb-4">
+      <title>AppStore | App-details</title>
+
       <div className="flex items-center justify-between gap-6">
         <div className="flex justify-start gap-5 items-center">
           <img
@@ -111,6 +112,7 @@ const AppDetails = () => {
       {app.reviews?.length > 0 && (
         <div className="mt-6">
           <h2 className="text-xl font-semibold mb-2">User Reviews</h2>
+
           <div className="space-y-2">
             {app.reviews.map((review, index) => (
               <div
@@ -126,6 +128,8 @@ const AppDetails = () => {
               </div>
             ))}
           </div>
+
+
           {comment && (
             <div className="bg-base-200 text-sm p-3 rounded-md shadow-sm my-1">
               <Review comment={comment} rating={rating}></Review>

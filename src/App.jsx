@@ -25,6 +25,8 @@ function App() {
   console.log(topApp);
   return (
     <div className="w-3/4 mx-auto py-4">
+      <title>AppStore | Home</title>
+
       <Slider app={slideApp}></Slider>
       <div>
         <h1 className="py-4 font-bold text-xl">Trending apps</h1>

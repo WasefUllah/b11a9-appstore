@@ -15,7 +15,9 @@ const Navbar = () => {
   return (
     <div className="w-11/12 mx-auto flex justify-between items-center py-3">
       <div>
-        <img src={logo} className="w-16 rounded-full" alt="" />
+        <Link to={"/"}>
+          <img src={logo} className="w-16 rounded-full" alt="" />
+        </Link>
       </div>
       <div className="flex justify-center items-center gap-5">
         <NavLink to="/">App</NavLink>
@@ -24,11 +26,13 @@ const Navbar = () => {
       </div>
       <div className="flex justify-center items-center gap-3">
         {userInfo && (
-          <img
-            className="w-12 h-12 rounded-full object-cover"
-            src={userInfo?.photoURL}
-            alt=""
-          />
+          <div className="tooltip tooltip-bottom" data-tip={`${userInfo?.displayName}`}>
+            <img
+              className="w-12 h-12 rounded-full object-cover "
+              src={userInfo?.photoURL}
+              alt=""
+            />
+          </div>
         )}
 
         {userInfo ? (

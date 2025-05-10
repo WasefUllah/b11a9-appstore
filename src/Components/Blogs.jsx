@@ -6,8 +6,13 @@ const Blogs = () => {
 
   return (
     <div className="w-11/12 mx-auto h-[425px] ">
+      <title>AppStore | Blogs</title>
+
       {blogs.map((blog) => (
-        <div key={blog.id} className="collapse bg-base-100 border border-base-300">
+        <div
+          key={blog.id}
+          className="collapse bg-base-100 border border-base-300"
+        >
           <input type="radio" name="my-accordion-1" defaultChecked />
           <div className="collapse-title font-semibold ">{blog.title}</div>
           <div className="collapse-content text-sm">{blog.content}</div>
