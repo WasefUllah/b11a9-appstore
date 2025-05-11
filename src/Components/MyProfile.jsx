@@ -5,22 +5,23 @@ import { toast } from "react-toastify";
 const MyProfile = () => {
   const { userInfo, updateUser } = useContext(AuthContext);
 
-  // Local states to manage input values
   const [displayName, setDisplayName] = useState(userInfo?.displayName || "");
   const [photoURL, setPhotoURL] = useState(userInfo?.photoURL || "");
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     setDisplayName(userInfo?.displayName || "");
     setPhotoURL(userInfo?.photoURL || "");
   }, [userInfo]);
-  console.log("before", userInfo);
+
   const handleUpdate = (e) => {
-    const displayName = e.target.name.value;
-    const photoURL = e.target.photo.value;
-    console.log("after", userInfo);
-    setDisplayName(displayName);
-    setPhotoURL(photoURL);
-    updateUser({ displayName, photoURL })
+    const name = e.target.name.value;
+    const photo = e.target.photo.value;
+
+    setLoading(true);
+    setDisplayName(name);
+    setPhotoURL(photo);
+    updateUser({ displayName: name, photoURL: photo })
       .then(() => {
         toast("Profile updated successfully!", {
           position: "top-center",
@@ -33,6 +34,9 @@ const MyProfile = () => {
           position: "top-center",
           autoClose: 800,
         });
+      })
+      .finally(() => {
+        setLoading(false);
       });
   };
 
@@ -74,8 +78,12 @@ const MyProfile = () => {
           />
         </div>
 
-        <button className="btn btn-primary w-full" type="submit">
-          Update Profile
+        <button
+          className="btn btn-primary w-full"
+          type="submit"
+          disabled={loading}
+        >
+          {loading ? "Updating..." : "Update Profile"}
         </button>
       </form>
     </div>

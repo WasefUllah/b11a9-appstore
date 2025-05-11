@@ -2,13 +2,12 @@ import React, { use } from "react";
 import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../Provider/AuthProvider";
 import { toast } from "react-toastify";
-// import { AuthContext } from "../Provider/AuthProvider/AuthProvider";
-// import { onAuthStateChanged } from "firebase/auth";
 
 const Register = () => {
   const { createUser, updateUser, setUserInfo, createUserWithGoogle } =
     use(AuthContext);
   const navigate = useNavigate();
+  
   const handleCreateUserWithGoogle = () => {
     createUserWithGoogle()
       .then((result) => {
@@ -20,6 +19,7 @@ const Register = () => {
         console.log(error);
       });
   };
+
   const handleRegisterBtn = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -27,7 +27,7 @@ const Register = () => {
     const email = form.email.value;
     const photo = form.photo.value;
     const password = form.password.value;
-    // console.log(name, email, photo, password);
+    
     const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
     if (!passwordRegex.test(password)) {
       toast.error(
@@ -39,6 +39,7 @@ const Register = () => {
       );
       return;
     }
+
     createUser(email, password)
       .then((result) => {
         const user = result.user;
@@ -63,7 +64,7 @@ const Register = () => {
   };
 
   return (
-    <div className="mt-10 w-3/5 mx-auto">
+    <div className="mt-10 w-4/5 sm:w-3/4 lg:w-2/5 mx-auto">
       <title>AppStore | Register</title>
 
       <div className="hero-content flex-col lg:flex-row-reverse">
@@ -87,7 +88,7 @@ const Register = () => {
                 type="text"
                 className="input"
                 name="photo"
-                placeholder="Photo URl"
+                placeholder="Photo URL"
                 required
               />
 
@@ -111,14 +112,14 @@ const Register = () => {
 
               <button
                 type="submit"
-                className="btn btn-neutral mt-4 hover:text-black hover:bg-base-200"
+                className="btn btn-neutral mt-4 hover:text-black hover:bg-base-200 w-full"
               >
                 Register
               </button>
             </form>
             <button
               onClick={handleCreateUserWithGoogle}
-              className="btn bg-white text-black border-[#e5e5e5] hover:bg-base-200"
+              className="btn bg-white text-black border-[#e5e5e5] hover:bg-base-200 w-full mt-4"
             >
               <svg
                 aria-label="Google logo"
@@ -150,7 +151,7 @@ const Register = () => {
               Login with Google
             </button>
             <p className="text-center font-semibold">
-              Already have a account? Click to{" "}
+              Already have an account? Click to{" "}
               <Link to="/auth/login" className="text-secondary">
                 Login
               </Link>
