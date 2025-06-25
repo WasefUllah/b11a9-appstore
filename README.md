@@ -38,40 +38,38 @@ A responsive and interactive web application that showcases a collection of apps
 "react-router": "^7.5.3",
 "react-toastify": "^11.0.5",
 "tailwindcss": "^4.1.5"
+```
 
-📁 Project Structure
-src/
-├── components/
-│   ├── AppCard.js         # Displays app summary cards
-│   ├── AppDetails.js      # Shows detailed app info
-│   ├── Review.js          # Renders user reviews
-├── data/                  # Mock data for apps
-├── App.js                 # Main app layout and routes
-├── index.js               # Entry point
-└── styles.css             # Tailwind CSS styles
+---
 
-🚀 Run Locally
-Clone the repository
 
+## 🚀 Run Locally
+
+```bash
 git clone https://github.com/WasefUllah/b11a9-appstore.git
 cd b11a9-appstore
-
-📄 License
-This project is licensed under the MIT License — free to use and modify.
-Let me know if you want this turned into a downloadable file or need one for your next project — I'm ready!
-
-
-Install dependencies
 npm install
-
-Start the development server
 npm run dev
+```
 
-🧩 Setup Notes
-Make sure you have Node.js and npm installed.
-Tailwind is already configured via tailwind.config.js.
-React Router is used with dynamic routing for app detail pages.
+---
 
-🤝 Contribution Guidelines
+## 🧩 Setup Notes
+
+- Make sure you have Node.js and npm installed.
+- Tailwind is already configured via `tailwind.config.js`.
+- React Router is used with dynamic routing for app detail pages.
+
+---
+
+## 🤝 Contribution Guidelines
+
 Feel free to fork, clone, or suggest improvements via pull requests.
+
 Found a bug? Open an issue with clear reproduction steps.
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License — free to use and modify.
